@@ -1,0 +1,54 @@
+#include <stdio.h>
+
+
+const int MAX_TURNOS = 112;
+
+typedef struct {
+    int numero;
+    char paciente[112]; //(16 pacientes/diaria por especialidad) * 7 especialistas 
+    int dni[8];
+    int especialidad[7]; //( 1 medico clinico - 2 cardiologo - 3 gastroenterologo - 4 traumatologo - 5 dermatologo - 6 endocrinologo - 7 oftalmologo)
+    int medico[13]; //( 3 medico clinico - 1 cardiologo - 2 gastroenterologo - 2 traumatologo - 1 dermatologo - 2 endocrinologo - 2 oftalmologo) (que algunos medicos atiendan solo en ciertos dias u horarios)
+    char fecha[11]; //  DD/MM/AAAA\0
+    char hora[6]; //  HH:MM\0
+    int estado; // 0 pendiente, 1 atendido, 2 cancelado 
+} Turno;
+
+int main(void) {
+    Turno turnos[MAX_TURNOS];
+    int cantidad = 0;
+    int opcion;
+
+    /* TODO: cargar turnos desde archivo */
+
+    do {
+        printf("\n--- TURNOS MEDICOS ---\n");
+        printf("1. Solicitar turno\n");
+        printf("2. Cancelar turno\n");
+        printf("3. Marcar como atendido\n");
+        printf("4. Consultar por paciente\n");
+        printf("5. Consultar por medico y fecha\n");
+        printf("6. Pendientes del dia\n");
+        printf("7. Reporte por especialidad y estado\n");
+        printf("0. Salir\n");
+        printf("Opcion: ");
+        scanf("%d", &opcion);
+
+        switch (opcion) {
+            case 1: /* TODO */ break;
+            case 2: /* TODO */ break;
+            case 3: /* TODO */ break;
+            case 4: /* TODO */ break;
+            case 5: /* TODO */ break;
+            case 6: /* TODO */ break;
+            case 7: /* TODO */ break;
+            case 0: break;
+            default: printf("Opcion invalida\n");
+        }
+    } while (opcion != 0);
+
+    /* TODO: guardar turnos en archivo */
+
+    (void)turnos; (void)cantidad;
+    return 0;
+}

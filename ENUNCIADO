@@ -1,0 +1,31 @@
+Problema 9: Sistema de Gestión de Turnos Médicos
+Desarrollar en lenguaje C un sistema de gestión de turnos para un consultorio médico
+pequeño con múltiples especialidades.
+Requerimientos mínimos:
+• Definir una estructura para representar cada turno con los campos: número de
+turno, nombre del paciente, DNI, especialidad, nombre del médico, fecha, hora
+y estado (pendiente / atendido / cancelado).
+• Almacenar los turnos en un arreglo estático con capacidad máxima definida
+como constante.
+• Implementar un menú principal con las siguientes opciones:
+◦ Solicitar turno: agregar un nuevo turno validando que no exista otro turno
+para el mismo médico en la misma fecha y hora.
+◦ Cancelar turno: cambiar el estado del turno a cancelado.
+◦ Marcar como atendido: actualizar el estado de un turno.
+◦ Consultar turnos por paciente (por nombre o DNI).
+◦ Consultar turnos por médico y fecha.
+◦ Listar todos los turnos pendientes del día.
+◦ Reporte de turnos por especialidad y estado.
+• Persistir los turnos en un archivo al salir y cargarlo al iniciar.
+Gestión de médicos con lista dinámica:
+• Mantener una lista dinámica de médicos con sus datos: nombre, especialidad
+y días de atención.
+• Al solicitar un turno, verificar que el médico elegido atiende el día seleccionado.
+Funcionalidades opcionales (valor agregado):
+• Implementar una agenda semanal: mostrar todos los turnos de una semana
+organizados por día y hora.
+• Generar estadísticas: especialidad con más turnos, médico con mayor
+cantidad de atenciones y porcentaje de cancelaciones.
+• Agregar un módulo de recordatorios: listar los turnos del día siguiente.
+  Observación: La validación de superposición de turnos es una de las partes más
+importantes del sistema. Se recomienda implementarla como una función separada 
